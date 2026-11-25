@@ -5,12 +5,11 @@ The AQuadZ LLC website: a static one-page site plus a privacy page. It uses plai
 | File | What it is |
 |---|---|
 | `index.html` | Home: services, how it works, industries, approach, FAQ, contact |
-| `astra/index.html` | Astra Trade product page (aquadz.com/astra/; Astra is the product family, Astra Trade the one for metal and fastener traders): labelled close-ups, a five-step switcher (a few lines of inline script; without it every step shows), deal flow, trust, FAQ |
-| `astra/img/` | Astra close-ups (crops of screenshots), WebP, taken from a demo stack with made-up data only (no customer names, item codes or prices) |
-| `astra-smile/index.html` | Astra Smile product page (aquadz.com/astra-smile/), for dental clinics: the Astra Trade page's layout in dental blue, with a visit switcher, between-visit close-ups, the owner's overview, the promo reel, trust, FAQ |
+| `astra/index.html` | Astra Trade product page (aquadz.com/astra/; Astra is the product family, Astra Trade the one for steel and fastener traders), in indigo with an amber accent: labelled close-ups, a five-step quote switcher (a few lines of inline script; without it every step shows), deal close-ups, reports, the promo reel, trust, FAQ |
+| `astra-smile/index.html` | Astra Smile product page (aquadz.com/astra-smile/), for dental clinics: the same layout in dental blue, with a visit switcher, between-visit close-ups, the owner's overview, the promo reel, trust, FAQ |
 | `astra-pulse/index.html` | Astra Pulse product page (aquadz.com/astra-pulse/), for hospitals: the same layout in teal |
-| `astra-smile/img/`, `astra-pulse/img/` | Close-ups of the app screens, WebP, cut from the promo reels' HTML mock-ups (made-up patients, doctors and amounts; the X-ray and aligner screens include Unsplash photos, Unsplash License) |
-| `astra-smile/media/`, `astra-pulse/media/` | The promo reels re-encoded to 720p (about 7 MB each; the 1080p masters are 35–40 MB), their poster frames and English captions made from the voice-over timings |
+| `astra/img/`, `astra-smile/img/`, `astra-pulse/img/` | Close-ups of the app screens, WebP, cut from the promo reels' HTML mock-ups (made-up companies, patients, doctors and amounts; the X-ray and aligner screens include Unsplash photos, Unsplash License) |
+| `astra/media/`, `astra-smile/media/`, `astra-pulse/media/` | The promo reels re-encoded to 720p (about 7 MB each; the 1080p masters are 35–40 MB), their poster frames and English captions made from the voice-over timings |
 | `privacy.html` | Privacy notice |
 | `styles.css` | Styles (light and dark follow the visitor's system setting) |
 | `favicon.svg` | Square logo for the browser tab |
@@ -64,8 +63,8 @@ Send a test mail to a Gmail address and open "Show original": SPF, DKIM and DMAR
 
 ## Before you publish
 
-- The Astra page's screenshots come from a demo stack seeded with made-up companies, people and prices; retake them the same way (never from a customer's data), and check each one for real names before adding it.
+- The Astra Trade close-ups come from the promo reel's mock-up with made-up companies, people and prices; retake them the same way (never from a customer's data), and check each one for real names before adding it. Never name a customer, its suppliers or staff, or the accounting system a customer uses. Claim only what is true: a person confirms what Astra reads, nothing reaches a customer until someone presses Send, no accuracy figures, no customer portal, and no claim that it fits any metal or any ERP.
 - The site uses no customer data. The hero examples are made up: "Northwind Trading" (a classic sample-company name), products A-120, B-310, C-045, and the WhatsApp and phone-call snippets. Add a case study only after a customer agrees to it in writing.
-- Astra Smile and Astra Pulse are presented as products, with "Book a free demo" as the only call to action: no free trial and no prices. No clinic or hospital is named; the close-ups use made-up names only.
-- To refresh a reel after a new master: `ffmpeg -i MASTER.mp4 -vf "scale=720:1280:flags=lanczos,format=yuv420p" -c:v libx264 -preset slow -crf 27 -movflags +faststart -c:a aac -b:a 96k astra-smile/media/astra-smile-tour.mp4` (same for Pulse), and replace the poster if the opening changed.
+- Astra Trade, Astra Smile and Astra Pulse are presented as products, with "Book a free demo" as the only call to action: no free trial and no prices. No clinic or hospital is named; the close-ups use made-up names only.
+- To refresh a reel after a new master: `ffmpeg -i MASTER.mp4 -vf "scale=720:1280:flags=lanczos,format=yuv420p" -c:v libx264 -preset slow -crf 27 -movflags +faststart -c:a aac -b:a 96k astra-smile/media/astra-smile-tour.mp4` (same for Pulse, and for Trade into `astra/media/astra-trade-tour.mp4`), and replace the poster if the opening changed.
 - Add a partner logo or name (for example a reseller partnership) only if the partner agreement allows it.
