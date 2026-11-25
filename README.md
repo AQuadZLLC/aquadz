@@ -5,6 +5,8 @@ The AQuadZ LLC website: a static one-page site plus a privacy page. It uses plai
 | File | What it is |
 |---|---|
 | `index.html` | Home: services, how it works, industries, approach, FAQ, contact |
+| `astra/index.html` | Astra product page (aquadz.com/astra/): what it does, who it is for, how a quote is made, screenshots |
+| `astra/img/` | Astra screenshots, WebP, taken from a demo stack with made-up data only (no customer names, item codes or prices) |
 | `privacy.html` | Privacy notice |
 | `styles.css` | Styles (light and dark follow the visitor's system setting) |
 | `favicon.svg` | Square logo for the browser tab |
@@ -58,6 +60,7 @@ Send a test mail to a Gmail address and open "Show original": SPF, DKIM and DMAR
 
 ## Before you publish
 
+- The Astra page's screenshots come from a demo stack seeded with made-up companies, people and prices; retake them the same way (never from a customer's data), and check each one for real names before adding it.
 - The site uses no customer data. The hero examples are made up: "Northwind Trading" (a classic sample-company name), products A-120, B-310, C-045, and the WhatsApp and phone-call snippets. Add a case study only after a customer agrees to it in writing.
 - The clinic app is described as a pilot in India; no clinic is named.
 - Add a partner logo or name (for example a reseller partnership) only if the partner agreement allows it.
