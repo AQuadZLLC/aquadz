@@ -376,28 +376,33 @@ html:not(.js) .sw-pic { grid-area: auto; margin-bottom: 28px; }
 .trust-art p { margin: 0; font-weight: 700; color: var(--ink-soft); }
 .cta-note { margin: 22px 0 0 !important; font-size: 0.9rem !important; color: rgb(255 255 255 / 75%) !important; }
 
-/* ---------- Astra Smile and Astra Pulse: the Astra Trade page, in each product's colour ---------- */
+/* ---------- Astra Trade, Astra Smile and Astra Pulse: one product page, in each product's colour ---------- */
+.astra-trade { --brand: #4f46e5; --brand-3: #4338ca; --brand-soft: #e0e7ff; --pc: 79 70 229; }
 .astra-smile { --brand: #0284c7; --brand-3: #0369a1; --brand-soft: #e0f2fe; --pc: 2 132 199; }
 .astra-pulse { --brand: #0d9488; --brand-3: #0f766e; --brand-soft: #ccfbf1; --pc: 13 148 136; }
 @media (prefers-color-scheme: dark) {
+  .astra-trade { --brand: #818cf8; --brand-soft: #1e1b4b99; }
   .astra-smile { --brand: #38bdf8; --brand-soft: #0c2a3f99; }
   .astra-pulse { --brand: #2dd4bf; --brand-soft: #0b302c99; }
 }
-:is(.astra-smile, .astra-pulse) .btn-primary { box-shadow: 0 10px 30px rgb(var(--pc) / 35%); }
-:is(.astra-smile, .astra-pulse) .callout { color: var(--brand-3); border-color: rgb(var(--pc) / 30%); }
-:is(.astra-smile, .astra-pulse) .closeup-hero { background: linear-gradient(160deg, rgb(var(--pc) / 30%), rgb(22 179 100 / 12%)); }
-:is(.astra-smile, .astra-pulse) .hero-glow { background:
+:is(.astra-trade, .astra-smile, .astra-pulse) .btn-primary { box-shadow: 0 10px 30px rgb(var(--pc) / 35%); }
+:is(.astra-trade, .astra-smile, .astra-pulse) .callout { color: var(--brand-3); border-color: rgb(var(--pc) / 30%); }
+:is(.astra-trade, .astra-smile, .astra-pulse) .closeup-hero { background: linear-gradient(160deg, rgb(var(--pc) / 30%), rgb(22 179 100 / 12%)); }
+:is(.astra-trade, .astra-smile, .astra-pulse) .hero-glow { background:
   radial-gradient(40% 50% at 20% 30%, rgb(var(--pc) / 46%), transparent 70%),
   radial-gradient(35% 45% at 80% 20%, rgb(239 68 68 / 20%), transparent 70%),
   radial-gradient(30% 40% at 65% 85%, rgb(22 179 100 / 24%), transparent 70%), radial-gradient(25% 30% at 95% 70%, rgb(245 179 1 / 14%), transparent 70%); }
-:is(.astra-smile, .astra-pulse) .cta-card { background: radial-gradient(50% 110% at 0% 0%, rgb(22 179 100 / 85%) 0%, transparent 60%), radial-gradient(45% 100% at 100% 100%, rgb(239 68 68 / 70%) 0%, transparent 60%), radial-gradient(35% 70% at 100% 0%, rgb(245 179 1 / 60%) 0%, transparent 60%), linear-gradient(135deg, #0284c7, #0369a1); }
+:is(.astra-trade, .astra-smile, .astra-pulse) .cta-card { background: radial-gradient(50% 110% at 0% 0%, rgb(22 179 100 / 85%) 0%, transparent 60%), radial-gradient(45% 100% at 100% 100%, rgb(239 68 68 / 70%) 0%, transparent 60%), radial-gradient(35% 70% at 100% 0%, rgb(245 179 1 / 60%) 0%, transparent 60%), linear-gradient(135deg, #0284c7, #0369a1); }
 .astra-pulse .cta-card { background: radial-gradient(50% 110% at 0% 0%, rgb(47 107 255 / 70%) 0%, transparent 60%), radial-gradient(45% 100% at 100% 100%, rgb(239 68 68 / 70%) 0%, transparent 60%), radial-gradient(35% 70% at 100% 0%, rgb(245 179 1 / 60%) 0%, transparent 60%), linear-gradient(135deg, #0d9488, #0f766e); }
+.astra-trade .closeup-hero { background: linear-gradient(160deg, rgb(var(--pc) / 30%), rgb(251 191 36 / 16%)); }
+.astra-trade .cta-card { background: radial-gradient(50% 110% at 0% 0%, rgb(251 191 36 / 75%) 0%, transparent 60%), radial-gradient(45% 100% at 100% 100%, rgb(22 179 100 / 55%) 0%, transparent 60%), radial-gradient(35% 70% at 100% 0%, rgb(239 68 68 / 50%) 0%, transparent 60%), linear-gradient(135deg, #4f46e5, #4338ca); }
 .sw-pic.sw-square img { max-height: 520px; }
 
-/* product mark: tooth (Smile), heart with a pulse (Pulse) */
+/* product mark: two arrows (Trade), tooth (Smile), heart with a pulse (Pulse) */
 .pmark { display: inline-grid; place-items: center; flex: none; width: 22px; height: 22px; border-radius: 7px; background: linear-gradient(135deg, var(--m1), var(--m2)); }
 .pmark svg { width: 70%; height: 70%; }
 .pmark-lg { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 10px 24px rgb(11 19 36 / 14%); }
+.m-trade { --m1: #6366f1; --m2: #4f46e5; }
 .m-smile { --m1: #38bdf8; --m2: #0284c7; }
 .m-pulse { --m1: #2dd4bf; --m2: #0d9488; }
 
@@ -415,6 +420,7 @@ html:not(.js) .sw-pic { grid-area: auto; margin-bottom: 28px; }
 
 /* home: services two by two, then the three Astra products in a row */
 @media (min-width: 1000px) { .cards.cards-2x2 .card { grid-column: span 3; } }
+.c-indigo { --c: linear-gradient(90deg, #6366f1, #fbbf24); --c1: #4f46e5; }
 .c-sky { --c: linear-gradient(90deg, #38bdf8, #0284c7); --c1: #0284c7; }
 .c-teal { --c: linear-gradient(90deg, #2dd4bf, #0d9488); --c1: #0d9488; }
 .products-title { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; letter-spacing: -0.03em; margin: 72px 0 0.35em; scroll-margin-top: 90px; }
