@@ -316,6 +316,9 @@ p { margin: 0 0 1em; }
 .card-link { margin: 18px 0 0; font-weight: 700; }
 .card-link a { text-decoration: none; }
 .card-link a:hover { text-decoration: underline; }
+.card-link:has(.card-watch) { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.card-watch { color: var(--c1, var(--brand)); }
+.card-watch .play-ico { margin-right: 8px; border-left-width: 9px; border-block-width: 6px; }
 nav a[aria-current="page"] { color: var(--night-ink); background: rgb(255 255 255 / 8%); }
 .centered { text-align: center; max-width: 24ch; margin-inline: auto; }
 .centered-lead { text-align: center; max-width: 60ch; margin: 0 auto; color: var(--ink-soft); font-size: clamp(1.05rem, 1.6vw, 1.2rem); }
@@ -433,6 +436,21 @@ html:not(.js) .sw-pic { grid-area: auto; margin-bottom: 28px; }
 .tour video { display: block; width: 100%; max-width: 340px; height: auto; aspect-ratio: 9 / 16; margin-inline: auto; border-radius: 28px; background: #0b1324; box-shadow: 0 30px 70px rgb(11 19 36 / 28%); }
 .tour .ticks { --c1: var(--brand); margin-top: 18px; }
 .tour .ticks li { color: var(--ink-soft); }
+/* a big play button over the poster, so the tour reads as a video (without the script, the browser's own controls show) */
+.player { position: relative; width: 100%; max-width: 340px; margin-inline: auto; }
+.play-btn { display: none; }
+.js .play-btn { position: absolute; inset: 0; display: grid; place-items: center; align-content: end; padding: 0 0 clamp(110px, 40%, 140px); border: 0; border-radius: 28px; cursor: pointer; color: #fff; font: inherit; background: linear-gradient(180deg, rgb(7 11 22 / 0%) 45%, rgb(7 11 22 / 55%)); }
+.player.is-playing .play-btn { display: none; }
+.play-circle { position: relative; width: 84px; height: 84px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 10px rgb(255 255 255 / 25%), 0 16px 34px rgb(0 0 0 / 40%); transition: transform .2s ease; }
+.play-circle::after { content: ""; position: absolute; left: 33px; top: 26px; border-left: 27px solid #fff; border-block: 16px solid transparent; }
+.play-label { position: absolute; top: 14px; right: 14px; padding: 6px 12px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; background: rgb(7 11 22 / 72%); }
+.play-btn:hover .play-circle { transform: scale(1.07); }
+.play-btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  .play-circle::before { content: ""; position: absolute; inset: -10px; border-radius: 50%; border: 2px solid rgb(255 255 255 / 70%); animation: play-ring 2.2s ease-out infinite; }
+  @keyframes play-ring { from { transform: scale(1); opacity: .9; } to { transform: scale(1.45); opacity: 0; } }
+}
+.play-ico { display: inline-block; margin-right: 10px; border-left: 11px solid currentColor; border-block: 7px solid transparent; }
 
 /* header: with three products, the secondary links go first on mid-size screens */
 @media (max-width: 1120px) { .site-header nav a.nav-sub { display: none; } }

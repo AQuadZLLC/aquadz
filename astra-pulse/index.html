@@ -62,7 +62,7 @@
           <p class="lead">Astra Pulse registers the patient, shows their turn on their phone, and keeps the doctor's notes, lab reports, medicines and bills on one record. Your doctors decide.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#demo">Book a free demo <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="#how-it-works">How it works</a>
+            <a class="btn btn-ghost btn-watch" href="#tour"><span class="play-ico" aria-hidden="true"></span>Watch the tour · 1:18</a>
           </div>
         </div>
 
@@ -71,6 +71,29 @@
           <span class="callout c-tl" aria-hidden="true">Book · reschedule · remind</span>
           <span class="callout c-br" aria-hidden="true">Token 23 · your turn in ~4 min</span>
         </figure>
+      </div>
+    </section>
+
+    <!-- The reel -->
+    <section class="section section-soft tour-section" id="tour">
+      <div class="wrap tour">
+        <div>
+          <h2>See Astra Pulse in 80 seconds</h2>
+          <p class="lead">A short tour of a day at the hospital, from the first token to the owner's view.</p>
+          <ul class="ticks">
+            <li>Runs in the browser at every desk, and on a phone</li>
+            <li>SMS and WhatsApp for tokens, reports and reminders</li>
+            <li>In your patients' language</li>
+          </ul>
+        </div>
+        <div class="player">
+          <video controls preload="none" playsinline width="720" height="1280" poster="media/tour-poster.webp" aria-label="Astra Pulse tour, 1 minute 18 seconds, with voice-over">
+            <source src="media/astra-pulse-tour.mp4" type="video/mp4">
+            <track kind="captions" src="media/astra-pulse-tour.en.vtt" srclang="en" label="English">
+            <a href="media/astra-pulse-tour.mp4">Watch the Astra Pulse tour (MP4, 7 MB)</a>
+          </video>
+          <button type="button" class="play-btn" aria-label="Play the Astra Pulse tour, 1 minute 18 seconds, with sound"><span class="play-circle" aria-hidden="true"></span><span class="play-label">Watch the tour · 1:18</span></button>
+        </div>
       </div>
     </section>
 
@@ -191,28 +214,8 @@
       </div>
     </section>
 
-    <!-- The reel -->
-    <section class="section" id="tour">
-      <div class="wrap tour">
-        <div>
-          <h2>See Astra Pulse in 80 seconds</h2>
-          <p class="lead">A short tour of a day at the hospital, from the first token to the owner's view.</p>
-          <ul class="ticks">
-            <li>Runs in the browser at every desk, and on a phone</li>
-            <li>SMS and WhatsApp for tokens, reports and reminders</li>
-            <li>In your patients' language</li>
-          </ul>
-        </div>
-        <video controls preload="none" playsinline width="720" height="1280" poster="media/tour-poster.webp" aria-label="Astra Pulse tour, 80 seconds, with voice-over">
-          <source src="media/astra-pulse-tour.mp4" type="video/mp4">
-          <track kind="captions" src="media/astra-pulse-tour.en.vtt" srclang="en" label="English">
-          <a href="media/astra-pulse-tour.mp4">Watch the Astra Pulse tour (MP4, 7 MB)</a>
-        </video>
-      </div>
-    </section>
-
     <!-- Trust -->
-    <section class="section section-soft" id="trust">
+    <section class="section" id="trust">
       <div class="wrap trust">
         <div>
           <h2>Your patients' data, your rules</h2>
@@ -232,7 +235,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section">
+    <section id="faq" class="section section-soft">
       <div class="wrap faq-wrap">
         <div>
           <p class="eyebrow">Questions</p>
@@ -318,6 +321,16 @@
         });
         pics.forEach(function (p) { p.classList.toggle('is-on', p.getAttribute('data-step') === n); });
       });
+    });
+  })();
+  (function () {
+    document.querySelectorAll('.player').forEach(function (p) {
+      var v = p.querySelector('video'), b = p.querySelector('.play-btn');
+      if (!v || !b) return;
+      v.removeAttribute('controls');
+      function start() { p.classList.add('is-playing'); v.setAttribute('controls', ''); }
+      b.addEventListener('click', function () { start(); var r = v.play(); if (r && r.catch) r.catch(function () {}); });
+      v.addEventListener('play', start);
     });
   })();
   </script>
