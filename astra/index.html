@@ -62,7 +62,7 @@
           <p class="lead">Astra Trade turns a customer's email or WhatsApp into a priced quote, gets it approved in one click, and follows the deal to the mill, the ship and the payment. Your people decide.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#demo">Book a free demo <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="#how-it-works">How it works</a>
+            <a class="btn btn-ghost btn-watch" href="#tour"><span class="play-ico" aria-hidden="true"></span>Watch the tour · 1:31</a>
           </div>
         </div>
 
@@ -71,6 +71,29 @@
           <span class="callout c-tl" aria-hidden="true">Inquiry → paid, one journey</span>
           <span class="callout c-br" aria-hidden="true">Waiting on: the customer</span>
         </figure>
+      </div>
+    </section>
+
+    <!-- The reel -->
+    <section class="section section-soft tour-section" id="tour">
+      <div class="wrap tour">
+        <div>
+          <h2>See Astra Trade in 90 seconds</h2>
+          <p class="lead">A short tour of one deal, from the customer's email to the money in the bank.</p>
+          <ul class="ticks">
+            <li>Runs in the browser, with approvals on a phone</li>
+            <li>Replies wait in your own Outlook or Gmail</li>
+            <li>Nothing goes out until you press Send</li>
+          </ul>
+        </div>
+        <div class="player">
+          <video controls preload="none" playsinline width="720" height="1280" poster="media/tour-poster.webp" aria-label="Astra Trade tour, 1 minute 31 seconds, with voice-over">
+            <source src="media/astra-trade-tour.mp4" type="video/mp4">
+            <track kind="captions" src="media/astra-trade-tour.en.vtt" srclang="en" label="English">
+            <a href="media/astra-trade-tour.mp4">Watch the Astra Trade tour (MP4, 7 MB)</a>
+          </video>
+          <button type="button" class="play-btn" aria-label="Play the Astra Trade tour, 1 minute 31 seconds, with sound"><span class="play-circle" aria-hidden="true"></span><span class="play-label">Watch the tour · 1:31</span></button>
+        </div>
       </div>
     </section>
 
@@ -196,28 +219,8 @@
       </div>
     </section>
 
-    <!-- The reel -->
-    <section class="section" id="tour">
-      <div class="wrap tour">
-        <div>
-          <h2>See Astra Trade in 90 seconds</h2>
-          <p class="lead">A short tour of one deal, from the customer's email to the money in the bank.</p>
-          <ul class="ticks">
-            <li>Runs in the browser, with approvals on a phone</li>
-            <li>Replies wait in your own Outlook or Gmail</li>
-            <li>Nothing goes out until you press Send</li>
-          </ul>
-        </div>
-        <video controls preload="none" playsinline width="720" height="1280" poster="media/tour-poster.webp" aria-label="Astra Trade tour, 90 seconds, with voice-over">
-          <source src="media/astra-trade-tour.mp4" type="video/mp4">
-          <track kind="captions" src="media/astra-trade-tour.en.vtt" srclang="en" label="English">
-          <a href="media/astra-trade-tour.mp4">Watch the Astra Trade tour (MP4, 7 MB)</a>
-        </video>
-      </div>
-    </section>
-
     <!-- Trust -->
-    <section class="section section-soft" id="trust">
+    <section class="section" id="trust">
       <div class="wrap trust">
         <div>
           <h2>Your data, your rules</h2>
@@ -237,7 +240,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section">
+    <section id="faq" class="section section-soft">
       <div class="wrap faq-wrap">
         <div>
           <p class="eyebrow">Questions</p>
@@ -323,6 +326,16 @@
         });
         pics.forEach(function (p) { p.classList.toggle('is-on', p.getAttribute('data-step') === n); });
       });
+    });
+  })();
+  (function () {
+    document.querySelectorAll('.player').forEach(function (p) {
+      var v = p.querySelector('video'), b = p.querySelector('.play-btn');
+      if (!v || !b) return;
+      v.removeAttribute('controls');
+      function start() { p.classList.add('is-playing'); v.setAttribute('controls', ''); }
+      b.addEventListener('click', function () { start(); var r = v.play(); if (r && r.catch) r.catch(function () {}); });
+      v.addEventListener('play', start);
     });
   })();
   </script>
