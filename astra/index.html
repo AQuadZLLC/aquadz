@@ -9,12 +9,13 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#070b16">
   <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add('js')</script>
   <meta property="og:title" content="Astra: from inquiry to paid invoice, for metal and fastener traders">
   <meta property="og:description" content="Reads every inquiry, finds your own SAP item for each line, prices it from the day's rates, and leaves every decision to your people.">
   <meta property="og:url" content="https://aquadz.com/astra/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AQuadZ">
-  <meta property="og:image" content="https://aquadz.com/astra/img/astra-quote.webp">
+  <meta property="og:image" content="https://aquadz.com/astra/img/found-item.webp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,93 +57,96 @@
         <div class="hero-copy">
           <p class="pill"><span class="dot"></span> Astra · for metal and fastener traders</p>
           <h1>From inquiry to paid invoice, <span class="grad">in one place</span>.</h1>
-          <p class="lead">Astra reads your customers' inquiries, finds your own SAP item for every line, prices it from the day's rates and prepares the quote. A person approves it, on a laptop or a phone, before anything goes out.</p>
+          <p class="lead">Astra reads every inquiry, finds your own SAP item for each line and prices it from the day's rates. Your people decide.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#demo">Book a demo <span aria-hidden="true">→</span></a>
             <a class="btn btn-ghost" href="#how-it-works">How it works</a>
           </div>
-          <ul class="hero-points">
-            <li>Reads mail, PDF, Excel and Word</li>
-            <li>Shows how it found each item</li>
-            <li>Nothing goes out without a click</li>
-          </ul>
         </div>
 
-        <div class="hero-shots">
-          <figure class="shot shot-wide">
-            <a class="shot-link" href="img/astra-quote.webp" aria-label="Open the screenshot full size"><img src="img/astra-quote.webp" width="1600" height="1000" alt="A quote in Astra: the customer's email on the left, and on the right the three lines Astra read, each with its SAP item, pieces, weight, rate per 100 and margin."></a>
-          </figure>
-          <figure class="shot shot-phone">
-            <a class="shot-link" href="img/astra-approve-phone.webp" aria-label="Open the screenshot full size"><img src="img/astra-approve-phone.webp" width="780" height="1688" alt="The same quote on a manager's phone, with the reason it needs approval and the Approve and Send back buttons."></a>
-          </figure>
-        </div>
+        <figure class="closeup closeup-hero">
+          <img src="img/found-item.webp" width="1400" height="590" alt="How Astra found an item: the customer wrote Hexagon screw ISO 4017 M8x30, A4-70. Astra read standard ISO 4017, grade A4-70, size M8, length 30, full thread, and matched SAP item 4000001, each part ticked.">
+          <span class="callout c-tl" aria-hidden="true">From their Excel, row 14</span>
+          <span class="callout c-br" aria-hidden="true">✓ Matched to your SAP item</span>
+        </figure>
       </div>
     </section>
 
     <!-- Who it's for -->
-    <section class="section" id="who">
+    <section class="section astra-who" id="who">
       <div class="wrap">
-        <p class="eyebrow">Who it's for</p>
-        <h2 class="section-title">Built for traders who quote from a mill's prices</h2>
-        <p class="lead astra-intro">Fasteners, bars, wire and other long products: you buy from mills, sell to industry, and keep SAP as your ledger. Your inquiries arrive in every format, and every line has to become your own item, at today's price.</p>
-        <div class="inds">
-          <article class="ind"><span class="ind-ico" aria-hidden="true">🧮</span><h3>Account managers</h3><p>Price an inquiry on a laptop, in tables that work like Excel. Only the values that need a look are highlighted.</p></article>
-          <article class="ind"><span class="ind-ico" aria-hidden="true">📱</span><h3>Sales managers</h3><p>Approve quotes, credit notes and reminders on a phone, with the reason in one line.</p></article>
-          <article class="ind"><span class="ind-ico" aria-hidden="true">🏭</span><h3>Order and mill desk</h3><p>Orders to the mill, its confirmation checked against the quote, and the files SAP needs.</p></article>
-          <article class="ind"><span class="ind-ico" aria-hidden="true">📑</span><h3>Shipping and finance</h3><p>Invoices, packing lists, certificates, payments and claims on the same deal, without retyping.</p></article>
+        <h2 class="centered">Built for traders who quote from a mill's prices</h2>
+        <p class="centered-lead">Fasteners, bars, wire and other long products: you buy from mills, sell to industry and keep SAP as your ledger. Inquiries arrive in every format, and every line has to become your own item, at today's price.</p>
+        <div class="who-row">
+          <div><h3>Account managers</h3><p>Price on a laptop, in tables that work like Excel.</p></div>
+          <div><h3>Sales managers</h3><p>Approve quotes and credit notes on a phone.</p></div>
+          <div><h3>Order and mill desk</h3><p>Orders to the mill, confirmations checked, files for SAP.</p></div>
+          <div><h3>Shipping and finance</h3><p>Papers, payments and claims on the same deal.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- How a quote is made -->
+    <!-- How a quote is made: step switcher -->
     <section class="section section-soft" id="how-it-works">
       <div class="wrap">
-        <p class="eyebrow">How a quote is made</p>
-        <h2 class="section-title">Astra does the reading, matching and arithmetic. Your people decide.</h2>
+        <h2 class="centered">How a quote is made</h2>
+        <p class="centered-lead">Astra does the reading, matching and arithmetic. Your people decide.</p>
 
-        <div class="feat">
-          <div class="feat-copy">
-            <ol class="feat-steps" start="1">
-              <li><h3>Reads the inquiry</h3><p>Forward the customer's mail to your team address. Astra reads the mail and its attachments: PDF (scans too), Excel, CSV and Word, in the customer's own language. Each line keeps a link to the place it came from.</p></li>
-              <li><h3>Finds your SAP item</h3><p>For every line, Astra reads the standard, grade, size, length and thread, and matches them to your own item list. "How Astra found this item" shows what the customer wrote, what Astra read and why this item fits.</p></li>
-              <li><h3>Prices it from the day's rates</h3><p>Rate per 100 or per 1000, with your discounts, freight, delivery terms and margins. Values Astra is unsure of are highlighted, so you check those and not the rest.</p></li>
-            </ol>
-          </div>
-          <figure class="shot">
-            <a class="shot-link" href="img/astra-found-item.webp" aria-label="Open the screenshot full size"><img src="img/astra-found-item.webp" width="1600" height="1000" loading="lazy" alt="The customer's Excel inquiry with line 14 highlighted, and beside it the panel How Astra found this item: what the customer wrote, what Astra read (standard ISO 4017, grade A4-70, size M8, length 30, full thread), and the SAP item it matched, each part ticked."></a>
-            <figcaption>The customer's Excel on the left, line by line. On the right, how Astra found the item.</figcaption>
-          </figure>
-        </div>
+        <div class="switcher">
+          <ol class="sw-steps">
+            <li class="sw-step is-on">
+              <button type="button" class="sw-head" aria-expanded="true" aria-controls="sw-p1" data-step="1"><span class="sw-num">1</span>Reads the inquiry</button>
+              <div class="sw-body" id="sw-p1"><p>Forward the customer's mail to your team address. Astra reads the mail and its attachments: PDF (scans too), Excel, CSV and Word, in the customer's own language.</p></div>
+            </li>
+            <li class="sw-step">
+              <button type="button" class="sw-head" aria-expanded="false" aria-controls="sw-p2" data-step="2"><span class="sw-num">2</span>Finds your SAP item</button>
+              <div class="sw-body" id="sw-p2"><p>For every line Astra reads the standard, grade, size, length and thread, and matches them to your own item list. You see what the customer wrote, what Astra read and why this item fits.</p></div>
+            </li>
+            <li class="sw-step">
+              <button type="button" class="sw-head" aria-expanded="false" aria-controls="sw-p3" data-step="3"><span class="sw-num">3</span>Prices it from the day's rates</button>
+              <div class="sw-body" id="sw-p3"><p>Rate per 100 or per 1000, with your discounts, freight, delivery terms and margins. Values Astra is unsure of are boxed, so you check those and not the rest.</p></div>
+            </li>
+            <li class="sw-step">
+              <button type="button" class="sw-head" aria-expanded="false" aria-controls="sw-p4" data-step="4"><span class="sw-num">4</span>Approved on a phone</button>
+              <div class="sw-body" id="sw-p4"><p>Quotes under the usual margin or over a credit limit go to a manager, with the reason and the customer's history in one line. Approve, or send back with a note.</p></div>
+            </li>
+            <li class="sw-step">
+              <button type="button" class="sw-head" aria-expanded="false" aria-controls="sw-p5" data-step="5"><span class="sw-num">5</span>Sent from the team mailbox</button>
+              <div class="sw-body" id="sw-p5"><p>The quote as Excel and PDF in your layout, the email in the customer's language, from your team mailbox with the account manager in Cc. Only after someone presses Send.</p></div>
+            </li>
+          </ol>
 
-        <div class="feat flip">
-          <div class="feat-copy">
-            <ol class="feat-steps" start="4">
-              <li><h3>Approved on a phone</h3><p>Quotes below the usual margin, or above a customer's credit limit, go to a manager. The phone shows what is unusual, the account manager's reason and the customer's history. Approve or send back, with a note.</p></li>
-            </ol>
+          <div class="sw-stage">
+            <figure class="closeup sw-pic is-on" data-step="1">
+              <img src="img/step-read.webp" width="700" height="515" loading="lazy" alt="The customer's email in German asking for a quote for inquiry 4711, with the request attached as PDF and Excel.">
+              <span class="callout c-br" aria-hidden="true">Read 3 lines</span>
+            </figure>
+            <figure class="closeup sw-pic" data-step="2">
+              <img src="img/step-match.webp" width="700" height="1060" loading="lazy" alt="The customer's Excel inquiry shown in Astra, with row 14 highlighted: line 10, their article NW-1001, a hexagon screw.">
+              <span class="callout c-br" aria-hidden="true">Row 14 → SAP item 4000001</span>
+            </figure>
+            <figure class="closeup sw-pic" data-step="3">
+              <img src="img/step-price.webp" width="1400" height="642" loading="lazy" alt="The quote's lines: SAP item, pieces, weight, rate per 100, value and margin, with the values to check boxed, and the note Priced 3 lines with the rates of 23 Nov.">
+              <span class="callout c-br" aria-hidden="true">Rates of the day · doubtful values boxed</span>
+            </figure>
+            <figure class="closeup sw-pic sw-phone" data-step="4">
+              <img src="img/step-approve.webp" width="600" height="1298" loading="lazy" alt="An approval on a phone: line 10 is priced 9.8% under its usual margin, the account manager's reason, the customer's win history, and the buttons Send back and Approve.">
+              <span class="callout c-bl" aria-hidden="true">Reason and history in one line</span>
+            </figure>
+            <figure class="closeup sw-pic" data-step="5">
+              <img src="img/step-send.webp" width="1400" height="426" loading="lazy" alt="Email made: send it from the team mailbox. The approved quote with its Excel file and the quoted lines.">
+              <span class="callout c-br" aria-hidden="true">Nothing goes out without a click</span>
+            </figure>
           </div>
-          <figure class="shot shot-tall">
-            <a class="shot-link" href="img/astra-approve-phone.webp" aria-label="Open the screenshot full size"><img src="img/astra-approve-phone.webp" width="780" height="1688" loading="lazy" alt="An approval on a phone: a line priced under its usual margin, the customer's win history, and the buttons Send back and Approve."></a>
-          </figure>
-        </div>
-
-        <div class="feat">
-          <div class="feat-copy">
-            <ol class="feat-steps" start="5">
-              <li><h3>Sent from the team mailbox</h3><p>Astra prepares the quote as Excel and PDF in your layout, and the email in the customer's language. It goes from your team mailbox with the account manager in Cc, only when a person presses Send.</p></li>
-            </ol>
-          </div>
-          <figure class="shot">
-            <a class="shot-link" href="img/astra-team-mailbox.webp" aria-label="Open the screenshot full size"><img src="img/astra-team-mailbox.webp" width="1600" height="1000" loading="lazy" alt="An approved quote ready to send from the team mailbox, with the quote workbook on the left and the quoted lines on the right."></a>
-          </figure>
         </div>
       </div>
     </section>
 
     <!-- After the yes -->
-    <section class="section section-dark" id="after">
+    <section class="section" id="after">
       <div class="wrap">
-        <p class="eyebrow">After the customer says yes</p>
-        <h2 class="section-title">One deal, from the order to the payment</h2>
+        <h2 class="centered">One deal, from the order to the payment</h2>
+        <p class="centered-lead">Every inquiry becomes a deal that keeps its mails, files and lines together, and shows whose turn it is.</p>
         <ol class="chain" aria-label="The steps of a deal">
           <li>Their order, checked against the quote</li>
           <li>Order to the mill</li>
@@ -152,55 +156,47 @@
           <li>Payment</li>
           <li>Claims</li>
         </ol>
-        <div class="feat on-night">
-          <div class="feat-copy">
-            <p>Every inquiry becomes a deal that keeps its mails, files and lines together. Astra checks the customer's order against the quote, prepares the order to the mill, compares the mill's confirmation line by line, and builds the shipping papers: invoice, packing list, origin declaration, insurance, certificates matched by heat.</p>
-            <p>Payments are matched to invoices, reminders are prepared for approval, and a claim starts from the deal it belongs to. Each deal shows whose turn it is, and since when.</p>
-          </div>
-          <figure class="shot">
-            <a class="shot-link" href="img/astra-papers.webp" aria-label="Open the screenshot full size"><img src="img/astra-papers.webp" width="1600" height="1000" loading="lazy" alt="The shipping papers of a deal: commercial invoice, packing list, EU origin declaration, insurance certificate, mill certificates matched by heat and the bill of lading, each with where it comes from and whether it is ready."></a>
-          </figure>
-        </div>
+        <figure class="closeup closeup-wide">
+          <img src="img/papers.webp" width="1400" height="477" loading="lazy" alt="The shipping papers of a deal: commercial invoice, packing list, EU origin declaration, insurance certificate, mill certificates matched by heat and the bill of lading, each with where it comes from and whether it is ready.">
+          <span class="callout c-tr" aria-hidden="true">Certificates matched by heat</span>
+          <span class="callout c-bl" aria-hidden="true">A missing paper is flagged</span>
+        </figure>
       </div>
     </section>
 
     <!-- One place -->
-    <section class="section" id="one-place">
+    <section class="section section-soft" id="one-place">
       <div class="wrap">
-        <div class="feat flip">
-          <div class="feat-copy">
-            <p class="eyebrow">Made for people who live in Excel</p>
-            <h2>What needs you today, on one page</h2>
-            <ul class="ticks astra-ticks">
-              <li>Home shows approvals, quotes, orders, papers, payments and claims, each with one small chart.</li>
-              <li>Tables sort, filter and download to Excel, like the sheets your team uses now.</li>
-              <li>Plain business words: inquiry, quote, regret, rate per 1000, ex-works.</li>
-              <li>One menu, and one main button on each screen.</li>
-            </ul>
-          </div>
-          <figure class="shot">
-            <a class="shot-link" href="img/astra-home.webp" aria-label="Open the screenshot full size"><img src="img/astra-home.webp" width="1600" height="1000" loading="lazy" alt="Astra's Home page: tiles for approvals, quotes, orders, papers, payments, reminders, mail and claims, a chart of quotes sent this month, and open deals by step."></a>
-          </figure>
-        </div>
+        <h2 class="centered">What needs you today, on one page</h2>
+        <p class="centered-lead">Approvals, quotes, orders, papers, payments and claims, each with one small chart. Tables sort, filter and download to Excel, in plain business words.</p>
+        <figure class="closeup closeup-wide">
+          <img src="img/home-tiles.webp" width="1400" height="396" loading="lazy" alt="Astra's Home page: tiles for approvals, quotes, orders, papers, payments, reminders, mail sorting and claims, each with a number and a small chart.">
+        </figure>
       </div>
     </section>
 
-    <!-- Systems -->
-    <section class="section section-soft" id="systems">
-      <div class="wrap">
-        <p class="eyebrow">Works beside your systems</p>
-        <h2 class="section-title">SAP stays your ledger. Astra works around it.</h2>
-        <div class="inds">
-          <article class="ind"><span class="ind-ico" aria-hidden="true">📤</span><h3>SAP: files in and out</h3><p>Astra reads the lists SAP exports and prepares the files SAP loads. No integration project, and nothing in SAP changes.</p></article>
-          <article class="ind"><span class="ind-ico" aria-hidden="true">✉️</span><h3>Microsoft 365</h3><p>Mail comes in and goes out through your team mailbox, with the person in Cc. Your people sign in with their company accounts.</p></article>
-          <article class="ind"><span class="ind-ico" aria-hidden="true">🇪🇺</span><h3>Hosted in the EU</h3><p>On AWS in Frankfurt. Your data stays yours, can be exported any time and is never used to train public AI models.</p></article>
-          <article class="ind"><span class="ind-ico" aria-hidden="true">⚖️</span><h3>Your rules</h3><p>Margins, approval limits, credit limits, quote layouts and who sees what are set by your managers.</p></article>
+    <!-- Trust -->
+    <section class="section" id="trust">
+      <div class="wrap trust">
+        <div>
+          <h2>Your data, your rules</h2>
+          <ul class="ticks astra-ticks">
+            <li><strong>Hosted in the EU</strong>, on AWS in Frankfurt, encrypted.</li>
+            <li><strong>Yours to export</strong> at any time, and never used to train public AI models.</li>
+            <li><strong>SAP stays your ledger.</strong> Astra reads the lists SAP exports and prepares the files SAP loads. No integration project.</li>
+            <li><strong>Microsoft 365:</strong> mail through your team mailbox, sign-in with company accounts.</li>
+            <li><strong>Your managers set the rules:</strong> margins, approval and credit limits, quote layouts, who sees what.</li>
+          </ul>
+        </div>
+        <div class="trust-art" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="120" height="120"><rect x="22" y="52" width="76" height="58" rx="12" fill="url(#lk)"/><path d="M38 54V40a22 22 0 0 1 44 0v14" fill="none" stroke="#2f6bff" stroke-width="9" stroke-linecap="round"/><circle cx="60" cy="78" r="8" fill="#fff"/><rect x="57" y="80" width="6" height="14" rx="3" fill="#fff"/><defs><linearGradient id="lk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5989ff"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs></svg>
+          <p>EU · encrypted · exportable</p>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section">
+    <section id="faq" class="section section-soft">
       <div class="wrap faq-wrap">
         <div>
           <p class="eyebrow">Questions</p>
@@ -214,7 +210,7 @@
           </details>
           <details>
             <summary>Can it read scanned PDFs and unusual Excel files?</summary>
-            <p>Yes. Astra reads mail bodies, PDFs including scans, Excel, CSV and Word, in the customer's language. When it is not sure of a value, it highlights it for a person instead of guessing quietly.</p>
+            <p>Yes. Astra reads mail bodies, PDFs including scans, Excel, CSV and Word, in the customer's language. When it is not sure of a value, it marks it for a person instead of guessing quietly.</p>
           </details>
           <details>
             <summary>Who sends the quote to the customer?</summary>
@@ -233,7 +229,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="demo" class="section section-tight">
+    <section id="demo" class="section">
       <div class="wrap">
         <div class="cta-card">
           <h2>See Astra on a real inquiry.</h2>
@@ -265,5 +261,23 @@
     </div>
     <div class="wrap footer-bottom"><p>© 2026 AQuadZ LLC</p></div>
   </footer>
+
+  <script>
+  (function () {
+    var heads = document.querySelectorAll('.sw-head');
+    var pics = document.querySelectorAll('.sw-pic');
+    heads.forEach(function (h) {
+      h.addEventListener('click', function () {
+        var n = h.getAttribute('data-step');
+        heads.forEach(function (o) {
+          var on = o === h;
+          o.setAttribute('aria-expanded', on ? 'true' : 'false');
+          o.parentNode.classList.toggle('is-on', on);
+        });
+        pics.forEach(function (p) { p.classList.toggle('is-on', p.getAttribute('data-step') === n); });
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
