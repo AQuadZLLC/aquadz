@@ -5,7 +5,7 @@ The AQuadZ LLC website: a static one-page site plus a privacy page. It uses plai
 | File | What it is |
 |---|---|
 | `index.html` | Home: services, how it works, industries, approach, FAQ, contact |
-| `astra/index.html` | Astra product page (aquadz.com/astra/): labelled close-ups, a five-step switcher (a few lines of inline script; without it every step shows), deal flow, trust, FAQ |
+| `astra/index.html` | Astra Trade product page (aquadz.com/astra/; Astra is the product family, Astra Trade the one for metal and fastener traders): labelled close-ups, a five-step switcher (a few lines of inline script; without it every step shows), deal flow, trust, FAQ |
 | `astra/img/` | Astra close-ups (crops of screenshots), WebP, taken from a demo stack with made-up data only (no customer names, item codes or prices) |
 | `privacy.html` | Privacy notice |
 | `styles.css` | Styles (light and dark follow the visitor's system setting) |
