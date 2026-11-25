@@ -124,6 +124,14 @@ nav .nav-cta, .on-dark nav .nav-cta { color: #fff; background: linear-gradient(1
   .site-header.menu-open .nav-toggle { margin-left: auto; }
   .site-header.menu-open .header-row { align-content: flex-start; padding-top: 12px; }
 }
+@media (max-width: 400px) {
+  .js .header-row { gap: 8px; }
+  .js .site-header .brand-mark { width: 32px; }
+  .js .site-header .brand { gap: 8px; font-size: 1.05rem; }
+  .js .site-header:not(.menu-open) nav .nav-cta { padding: 8px 12px; font-size: 0.86rem; }
+  .js .nav-toggle { width: 40px; height: 40px; }
+}
+@media (max-width: 350px) { .site-header:not(.menu-open) .cta-free { display: none; } }
 
 /* ---------- Type ---------- */
 h1, h2, h3 { line-height: 1.08; letter-spacing: -0.035em; margin: 0 0 0.45em; }
